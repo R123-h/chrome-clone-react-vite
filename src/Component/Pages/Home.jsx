@@ -2,27 +2,27 @@ import { useEffect, useRef } from "react";
 import "./home.css";
 import { Nav } from "react-bootstrap";
 import Mosaic from "./Mosaic";
-
+import Fast from "./Fast";
 function Home({ cardRef }) {
-    const navRef = useRef(null);
+  const navRef = useRef(null);
 
-    useEffect(() => {
-      const handleScroll = () => {
-        if (navRef.current) {
-          if (window.scrollY > navRef.current.offsetTop) {
-            navRef.current.classList.add("sticky");
-          } else {
-            navRef.current.classList.remove("sticky");
-          }
+  useEffect(() => {
+    const handleScroll = () => {
+      if (navRef.current) {
+        if (window.scrollY > navRef.current.offsetTop) {
+          navRef.current.classList.add("sticky");
+        } else {
+          navRef.current.classList.remove("sticky");
         }
-      };
-  
-      window.addEventListener("scroll", handleScroll);
-  
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, []);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -73,7 +73,7 @@ function Home({ cardRef }) {
               </Nav>
             </ul>
           </div>
-          <span className="contentbar card-hidden" style={{ fontSize: "12px" }} >
+          <span className="contentbar card-hidden" style={{ fontSize: "12px" }}>
             Need the Chrome installer?{" "}
             <a href="/" className="text-decoration-none ms-1">
               Download here
@@ -81,7 +81,12 @@ function Home({ cardRef }) {
           </span>
         </div>
       </div>
-      <Mosaic />
+     <div >
+     <Mosaic />
+     </div>
+      <div className="mt-5">
+        <Fast />
+      </div>
     </>
   );
 }

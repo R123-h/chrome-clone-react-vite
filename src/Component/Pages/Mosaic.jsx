@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import {
+  motion,
+  useViewportScroll,
+  useTransform,
+  useAnimation,
+} from "framer-motion";
 import "./Mosaic.css";
 
 const images = [
@@ -61,60 +66,69 @@ const Mosaic = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const x = useTransform(
-    scrollY,
-    [0, 1000],
-    [0, scrollDirection === "down" ? -500 : 500]
-  );
+  // const x = useTransform(
+  //   scrollY,
+  //   [0, 1000],
+  //   [0, scrollDirection === "down" ? -500 : 500]
+  // );
 
-  const yTransforms = images.map((_, index) =>
-    useTransform(
-      scrollY,
-      [0, 1000],
-      [0, scrollDirection === "up" ? (index % 2 === 0 ? -100 : 100) : 0]
-    )
-  );
+  // const yTransforms = images.map((_, index) =>
+  //   useTransform(
+  //     scrollY,
+  //     [0, 1000],
+  //     [0, scrollDirection === "up" ? (index % 2 === 0 ? -100 : 100) : 0]
+  //   )
+  // );
 
   return (
-    <div className="chr-mosaic">
-      <div className="chr-mosaic__wrapper">
-        {images.map((image, index) => (
-          <motion.div
-            key={index}
-            className="chr-mosaic__item"
-            initial={{
-              opacity: index === 1 ? 0 : 1,
-              y: index === 0 || index === 3 ? -100 : 100, // Position images up and down
-              scale: 1,
-              display: index === 1 ? "none" : "flex",
-              marginTop: showSecondImage
-                ? 0
-                : index === 0 || index === 3
-                ? "20px"
-                : "20px",
-              marginBottom: showSecondImage ? 0 : 100,
-            }}
-            animate={{
-              opacity: showSecondImage || index !== 1 ? 1 : 0,
-              y: showSecondImage ? 0 : index === 0 || index === 3 ? -100 : 100,
+    <div>
+      <div className="chr-mosaic d-none d-lg-flex">
+        <div className="chr-mosaic__wrapper">
+          {images.map((image, index) => (
+            <motion.div
+              key={index}
+              className={`chr-mosaic__item ${
+                index === 0 || index === 3
+                  ? "chr-mosaic__item--up"
+                  : "chr-mosaic__item--down"
+              }`}
+              initial={{
+                opacity: index === 1 ? 0 : 1,
+                y: index === 0 || index === 3 ? -100 : 100, // Position images up and down
+                scale: 1,
+                display: index === 1 ? "none" : "flex",
+                marginTop: showSecondImage
+                  ? 0
+                  : index === 0 || index === 3
+                  ? "20px"
+                  : "20px",
+                marginBottom: showSecondImage ? 0 : 100,
+              }}
+              animate={{
+                opacity: showSecondImage || index !== 1 ? 1 : 0,
+                y: showSecondImage
+                  ? 0
+                  : index === 0 || index === 3
+                  ? -100
+                  : 100,
 
-              scale: 1,
-              display: showSecondImage || index !== 1 ? "flex" : "none",
-              marginTop: showSecondImage
-                ? 0
-                : index === 0 || index === 3
-                ? "100px"
-                : "30px",
-               
-            }}
-            style={{ y: yTransforms[index] }}
-            transition={{ duration: 0.8, delay: index * 0.2 }}
-          >
-            <div className={`chr-mosaic__image-container `}>
-              <img src={image.src} srcSet={image.srcSet} aria-hidden="true" />
-            </div>
-          </motion.div>
-        ))}
+                scale: 1,
+                display: showSecondImage || index !== 1 ? "flex" : "none",
+                marginTop: showSecondImage
+                  ? 0
+                  : index === 0 || index === 3
+                  ? "100px"
+                  : "30px",
+              }}
+              // style={{ y: yTransforms[index] }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+            >
+              <div className={`chr-mosaic__image-container `}>
+                <img src={image.src} srcSet={image.srcSet} aria-hidden="true" />
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );
