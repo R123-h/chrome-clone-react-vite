@@ -34,7 +34,7 @@ const Header = ({ isVisible }) => {
               >
                 <span>
                   <img
-                    src="/chrome/chrome/static/images/fallback/chrome-logo-2023.png"
+                    src="https://www.google.com/chrome/static/images/fallback/chrome-logo-2023.png"
                     alt="Chrome Logo"
                     className="logo"
                   />

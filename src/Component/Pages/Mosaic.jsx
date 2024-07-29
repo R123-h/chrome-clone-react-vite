@@ -10,29 +10,29 @@ import "./Mosaic.css";
 
 const images = [
   {
-    src: "/chrome/chrome/static/images/dev-components/chrome-gallery-1.webp",
+    src: "https://www.google.com/chrome/static/images/dev-components/chrome-gallery-1.webp",
     srcSet:
-      "/chrome/chrome/static/images/dev-components/chrome-gallery-1.webp, /chrome/chrome/static/images/dev-components/chrome-gallery-1-2x.webp 2x",
+      "https://www.google.com/chrome/static/images/dev-components/chrome-gallery-1.webp, /chrome/chrome/static/images/dev-components/chrome-gallery-1-2x.webp 2x",
   },
   {
-    src: "/chrome/chrome/static/images/dev-components/chrome-gallery-2.webp",
+    src: "https://www.google.com/chrome/static/images/dev-components/chrome-gallery-2.webp",
     srcSet:
-      "/chrome/chrome/static/images/dev-components/chrome-gallery-2.webp, /chrome/chrome/static/images/dev-components/chrome-gallery-2-2x.webp 2x",
+      "https://www.google.com/chrome/static/images/dev-components/chrome-gallery-2.webp, /chrome/chrome/static/images/dev-components/chrome-gallery-2-2x.webp 2x",
   },
   {
-    src: "/chrome/chrome/static/images/dev-components/chrome-gallery-3.webp",
+    src: "https://www.google.com/chrome/static/images/dev-components/chrome-gallery-3.webp",
     srcSet:
-      "/chrome/chrome/static/images/dev-components/chrome-gallery-3.webp, /chrome/chrome/static/images/dev-components/chrome-gallery-3-2x.webp 2x",
+      "https://www.google.com/chrome/static/images/dev-components/chrome-gallery-3.webp, /chrome/chrome/static/images/dev-components/chrome-gallery-3-2x.webp 2x",
   },
   {
-    src: "/chrome/chrome/static/images/dev-components/chrome-gallery-4.webp",
+    src: "https://www.google.com/chrome/static/images/dev-components/chrome-gallery-4.webp",
     srcSet:
-      "/chrome/chrome/static/images/dev-components/chrome-gallery-4.webp, /chrome/chrome/static/images/dev-components/chrome-gallery-4-2x.webp 2x",
+      "https://www.google.com/chrome/static/images/dev-components/chrome-gallery-4.webp, /chrome/chrome/static/images/dev-components/chrome-gallery-4-2x.webp 2x",
   },
   {
-    src: "/chrome/chrome/static/images/dev-components/chrome-gallery-5.webp",
+    src: "https://www.google.com/chrome/static/images/dev-components/chrome-gallery-5.webp",
     srcSet:
-      "/chrome/chrome/static/images/dev-components/chrome-gallery-5.webp, /chrome/chrome/static/images/dev-components/chrome-gallery-5-2x.webp 2x",
+      "https://www.google.com/chrome/static/images/dev-components/chrome-gallery-5.webp, /chrome/chrome/static/images/dev-components/chrome-gallery-5-2x.webp 2x",
   },
 ];
 

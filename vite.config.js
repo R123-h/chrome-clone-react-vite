@@ -7,12 +7,6 @@ export default defineConfig({
 
   server: {
     port: 3106,
-    proxy: {
-      "/chrome": {
-        target: "https://www.google.com",
-        changeOrigin: true,
-        rewrite: path => path.replace(/^\/chrome/, ''),
-      },
-    },
+    
   },
 });

@@ -38,7 +38,7 @@ function Home({ cardRef }) {
         <div className="m-auto pt-4">
           <div className="d-flex justify-content-center">
             <img
-              src="/chrome/chrome/static/images/chrome-logo-m100.svg"
+              src="https://www.google.com/chrome/static/images/chrome-logo-m100.svg"
               alt="main logo"
               height={45}
             />

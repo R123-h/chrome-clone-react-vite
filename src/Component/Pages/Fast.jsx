@@ -103,7 +103,7 @@ const Fast = ({ targetRef }) => {
         >
           <video
             aria-hidden="true"
-            poster="/chrome/chrome/static/images/dev-components/home-poster-2x.webp"
+            poster="https://www.google.com/chrome/static/images/dev-components/home-poster-2x.webp"
             style={{
               width: "50%",
               boxShadow: "rgba(32, 33, 36, 0.1) 0px 8px 20px 0px",
@@ -115,11 +115,11 @@ const Fast = ({ targetRef }) => {
           >
             <source
               type="video/webm"
-              src="/chrome/chrome/static/videos/dev-components/non-chrome.webm"
+              src="https://www.google.com/chrome/static/videos/dev-components/non-chrome.webm"
             />
             <source
               type="video/mp4"
-              src="/chrome/chrome/static/videos/dev-components/non-chrome.mp4"
+              src="https://www.google.com/chrome/static/videos/dev-components/non-chrome.mp4"
             />
             Your browser does not support the video tag.
           </video>
@@ -149,7 +149,7 @@ const Fast = ({ targetRef }) => {
                     </div>
                     <video
                       aria-hidden="true"
-                      poster="/chrome/chrome/static/images/dev-components/home-poster-2x.webp"
+                      poster="https://www.google.com/chrome/static/images/dev-components/home-poster-2x.webp"
                       style={{
                         width: "100%",
                         boxShadow: "rgba(32, 33, 36, 0.1) 0px 8px 20px 0px",
@@ -161,11 +161,11 @@ const Fast = ({ targetRef }) => {
                     >
                       <source
                         type="video/webm"
-                        src="/chrome/chrome/static/videos/dev-components/non-chrome.webm"
+                        src="https://www.google.com/chrome/static/videos/dev-components/non-chrome.webm"
                       />
                       <source
                         type="video/mp4"
-                        src="/chrome/chrome/static/videos/dev-components/non-chrome.mp4"
+                        src="https://www.google.com/chrome/static/videos/dev-components/non-chrome.mp4"
                       />
                       Your browser does not support the video tag.
                     </video>
@@ -185,7 +185,7 @@ const Fast = ({ targetRef }) => {
                     </div>
                     <video
                       aria-hidden="true"
-                      poster="/chrome/chrome/static/images/dev-components/home-poster-2x.webp"
+                      poster="https://www.google.com/chrome/static/images/dev-components/home-poster-2x.webp"
                       style={{
                         width: "100%",
                         boxShadow: "rgba(32, 33, 36, 0.1) 0px 8px 20px 0px",
@@ -197,11 +197,11 @@ const Fast = ({ targetRef }) => {
                     >
                       <source
                         type="video/webm"
-                        src="/chrome/chrome/static/videos/dev-components/non-chrome.webm"
+                        src="https://www.google.com/chrome/static/videos/dev-components/non-chrome.webm"
                       />
                       <source
                         type="video/mp4"
-                        src="/chrome/chrome/static/videos/dev-components/non-chrome.mp4"
+                        src="https://www.google.com/chrome/static/videos/dev-components/non-chrome.mp4"
                       />
                       Your browser does not support the video tag.
                     </video>
@@ -221,7 +221,7 @@ const Fast = ({ targetRef }) => {
                     </div>
                     <video
                       aria-hidden="true"
-                      poster="/chrome/chrome/static/images/dev-components/home-poster-2x.webp"
+                      poster="https://www.google.com/chrome/static/images/dev-components/home-poster-2x.webp"
                       style={{
                         width: "100%",
                         boxShadow: "rgba(32, 33, 36, 0.1) 0px 8px 20px 0px",
@@ -233,11 +233,11 @@ const Fast = ({ targetRef }) => {
                     >
                       <source
                         type="video/webm"
-                        src="/chrome/chrome/static/videos/dev-components/non-chrome.webm"
+                        src="https://www.google.com/chrome/static/videos/dev-components/non-chrome.webm"
                       />
                       <source
                         type="video/mp4"
-                        src="/chrome/chrome/static/videos/dev-components/non-chrome.mp4"
+                        src="https://www.google.com/chrome/static/videos/dev-components/non-chrome.mp4"
                       />
                       Your browser does not support the video tag.
                     </video>
