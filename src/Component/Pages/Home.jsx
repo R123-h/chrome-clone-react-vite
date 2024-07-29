@@ -3,6 +3,7 @@ import "./home.css";
 import { Nav } from "react-bootstrap";
 import Mosaic from "./Mosaic";
 import Fast from "./Fast";
+ 
 function Home({ cardRef }) {
   const navRef = useRef(null);
 
@@ -23,6 +24,13 @@ function Home({ cardRef }) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const targetRef = useRef(null);
+
+  const handleScrollToTarget = () => {
+    if (targetRef.current) {
+      targetRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
     <>
@@ -60,7 +68,7 @@ function Home({ cardRef }) {
                     <span>Safe</span>
                   </Nav.Link>
                 </Nav.Item>
-                <Nav.Item className="containerbarlist-item">
+                <Nav.Item className="containerbarlist-item" onClick={handleScrollToTarget}>
                   <Nav.Link className="text-muted text-decoration-none mainlogo d-flex align-items-center p-0 me-2">
                     <span>Fast</span>
                   </Nav.Link>
@@ -84,8 +92,8 @@ function Home({ cardRef }) {
      <div >
      <Mosaic />
      </div>
-      <div className="mt-5">
-        <Fast />
+      <div className="mt-5" style={{marginBottom:"100px",minHeight: "600px"}} >
+        <Fast targetRef={targetRef}/>
       </div>
     </>
   );

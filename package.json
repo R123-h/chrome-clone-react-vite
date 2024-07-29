@@ -20,7 +20,9 @@
     "react-icons": "^5.2.1",
     "react-intersection-observer": "^9.13.0",
     "react-lottie": "^1.2.4",
-    "rsuite": "^5.68.0"
+    "react-slick": "^0.30.2",
+    "rsuite": "^5.68.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

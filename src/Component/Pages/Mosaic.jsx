@@ -4,6 +4,7 @@ import {
   useViewportScroll,
   useTransform,
   useAnimation,
+  useScroll
 } from "framer-motion";
 import "./Mosaic.css";
 
@@ -36,7 +37,7 @@ const images = [
 ];
 
 const Mosaic = () => {
-  const { scrollY } = useViewportScroll();
+  const { scrollY } = useScroll();
   const [scrollDirection, setScrollDirection] = useState("down");
   const [showSecondImage, setShowSecondImage] = useState(false);
 
@@ -120,6 +121,8 @@ const Mosaic = () => {
                   ? "100px"
                   : "30px",
               }}
+              // style={{ scaleY: scrollY }}
+
               // style={{ y: yTransforms[index] }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
