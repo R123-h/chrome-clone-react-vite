@@ -4,7 +4,28 @@ import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "green" }}
 
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "green" ,}}
+      onClick={onClick}
+    >clilck</div>
+  );
+}
 const Fast = ({ targetRef }) => {
   const [scrollCount, setScrollCount] = useState(0);
   const [showCard, setShowCard] = useState(false);
@@ -42,7 +63,10 @@ const Fast = ({ targetRef }) => {
     speed: 500,
     slidesToShow: 2,
     // slidesToScroll: 3,
-    width :"459px"
+    width :"459px",
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />
+
   };
   return (
     <div
@@ -75,6 +99,7 @@ const Fast = ({ targetRef }) => {
           animate={{ opacity: showCard ? 0 : 1 }}
           transition={{ duration: 0.5 }}
           ref={videoRef}
+          style={{minHeight:"500px"}}
         >
           <video
             aria-hidden="true"
@@ -114,7 +139,7 @@ const Fast = ({ targetRef }) => {
                   <div className="card " style={{marginRight:"150px"}}>
                     <div className="card-body p-5">
                       <div className="d-flex">
-                        <h5>Prioritise performance</h5>
+                        <h5 className="me-3">Prioritise performance</h5>
                         <span>
                           Chrome is built for performance. Optimise your
                           experience with features like Energy Saver and Memory
@@ -150,7 +175,7 @@ const Fast = ({ targetRef }) => {
                 <div className="card " style={{marginRight:"150px"}}>
                     <div className="card-body p-5">
                       <div className="d-flex">
-                        <h5>Prioritise performance</h5>
+                        <h5  className="me-3">Prioritise performance</h5>
                         <span>
                           Chrome is built for performance. Optimise your
                           experience with features like Energy Saver and Memory
@@ -186,7 +211,7 @@ const Fast = ({ targetRef }) => {
                 <div className="card " style={{marginRight:"150px"}}>
                     <div className="card-body p-5">
                       <div className="d-flex">
-                        <h5>Prioritise performance</h5>
+                        <h5  className="me-3">Prioritise performance</h5>
                         <span>
                           Chrome is built for performance. Optimise your
                           experience with features like Energy Saver and Memory
