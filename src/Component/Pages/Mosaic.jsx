@@ -126,8 +126,8 @@ const Mosaic = () => {
               // style={{ y: yTransforms[index] }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
-              <div className={`chr-mosaic__image-container `}>
-                <img src={image.src} srcSet={image.srcSet} aria-hidden="true" />
+              <div className={`chr-mosaic__image-container`}>
+                <img src={image.src} srcSet={image.srcSet} aria-hidden="true"/>
               </div>
             </motion.div>
           ))}
